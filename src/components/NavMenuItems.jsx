@@ -32,7 +32,7 @@ export const NavMenuItems = ({
 
   // Child animation
   const itemVariants = {
-    closed: { opacity: [0.7, 0.5, 0.2, 0], y: 0 },
+    closed: { opacity: [0, 0.5, 0.2, 0], y: 0 },
     open: { opacity: [0, 0.2, 0.5, 1], y: 0 },
   };
 
@@ -46,7 +46,7 @@ export const NavMenuItems = ({
     >
       <div
         onClick={() => setIsMenuOpen(false)}
-        className="flex flex-col justify-around h-full font-bold text-xl p-4"
+        className="flex flex-col justify-around h-full font-semi text-xl p-4"
       >
         <motion.a
           variants={itemVariants}
