@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 export const ThemeToggle = () => {
   const [themeToggle, setThemeToggle] = useState(() => {
     const savedTheme = localStorage.getItem("myTheme");
-    return savedTheme ? savedTheme : "light";
+    return savedTheme ? savedTheme : "dark";
   });
 
   const handleToggleBtn = (val) => {
