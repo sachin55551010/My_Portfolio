@@ -8,6 +8,12 @@ import { NavBar } from "./components/NavBar";
 import { useRef } from "react";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { Hero } from "./sections/Hero";
+import { ChatAppInfoPage } from "./pages/ChatAppInfoPage";
+import { MyPortfolioPage } from "./pages/MyPortfolioPage";
+
+import { EmpTaskSystemPage } from "./pages/EmpTaskSystemPage";
+import { ScrollUpBtn } from "./components/ScrollUpBtn";
+import { CricManagementSystemPage } from "./components/projects/CricManagementSystemPage";
 function App() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -23,20 +29,21 @@ function App() {
   };
   return (
     <div className="min-h-screen bg-base text-foreground">
-      <NavBar
-        aboutRef={aboutRef}
-        skillsRef={skillsRef}
-        projectRef={projectRef}
-        contactRef={contactRef}
-        scrollSelection={scrollSelection}
-      />
       <ThemeToggle />
-      <Hero />
+      <ScrollUpBtn />
       <Routes>
         <Route
           path="/"
           element={
             <>
+              <NavBar
+                aboutRef={aboutRef}
+                skillsRef={skillsRef}
+                projectRef={projectRef}
+                contactRef={contactRef}
+                scrollSelection={scrollSelection}
+              />
+              <Hero />
               <section id="about" ref={aboutRef}>
                 <About />
               </section>
@@ -54,6 +61,13 @@ function App() {
               </section>
             </>
           }
+        />
+        <Route path="chat-app" element={<ChatAppInfoPage />} />
+        <Route path="my-portfolio" element={<MyPortfolioPage />} />
+        <Route path="employee-task-system" element={<EmpTaskSystemPage />} />
+        <Route
+          path="cricket-tournament-management-system"
+          element={<CricManagementSystemPage />}
         />
       </Routes>
     </div>

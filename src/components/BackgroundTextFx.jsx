@@ -1,88 +1,82 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-const MAX_ITEMS = 5; // hard limit
-const INTERVAL = 600; // was 200ms (big win)
+import { useEffect, useState } from "react";
 
 const words = [
   "HTML",
   "CSS",
   "JAVASCRIPT",
-  "TYPESCRIPT",
   "REACT",
-  "NEXTJS",
-  "TAILWIND",
-  "BOOTSTRAP",
+  "TAILWIND CSS",
   "FRAMER",
-  "AXIOS",
   "ZUSTAND",
   "REDUX",
   "RTK QUERY",
-  "GIT",
-  "GITHUB",
   "NODEJS",
   "EXPRESSJS",
   "MONGODB",
-  "MONGOOSE",
-  "REST API",
-  "WEBSOCKETS",
   "SOCKET.IO",
-  "AUTHENTICATION",
-  "JWT",
-  "OAUTH",
-  "BCRYPT",
-  "CLOUDINARY",
-  "VERCEL",
 ];
+
 export default function BackgroundTextFX() {
-  const [items, setItems] = useState([]);
-  const idRef = useRef(0);
+  const [visibleWords, setVisibleWords] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setItems((prev) => {
-        const next = prev.slice(-MAX_ITEMS + 1); // keep size capped
+    // Function to add a new word
+    const addWord = () => {
+      const randomWord = words[Math.floor(Math.random() * words.length)];
+      const id = Date.now() + Math.random();
 
-        next.push({
-          id: idRef.current++,
-          text: words[Math.floor(Math.random() * words.length)],
-          x: Math.random() * 90,
-          y: Math.random() * 90,
-          size: Math.floor(Math.random() * 6) + 14,
-          delay: Math.random() * 0.6, // stagger feel
-        });
+      const newWord = {
+        id,
+        text: randomWord,
+        x: Math.random() * 90 + 5, // 5% to 95% to avoid edges
+        y: Math.random() * 90 + 5,
+        size: Math.random() * 1.5 + 0.8, // Random size 0.8 to 2.3
+      };
 
-        return next;
-      });
-    }, INTERVAL);
+      setVisibleWords((prev) => [...prev, newWord]);
+
+      // Remove word after animation completes
+      setTimeout(() => {
+        setVisibleWords((prev) => prev.filter((w) => w.id !== id));
+      }, 3000); // Match with animation duration
+    };
+
+    // Add initial words
+    addWord();
+
+    // Add new word every 800ms (adjust for desired density)
+    const interval = setInterval(addWord, 800);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="absolute inset-0 -z-10 overflow-hidden pt-(--nav-h) pointer-events-none">
       <AnimatePresence>
-        {items.map((item) => (
+        {visibleWords.map((word) => (
           <motion.span
-            key={item.id}
-            className="text-foreground/30 font-bold"
-            initial={{ opacity: 0, scale: 0.6 }}
-            animate={{ opacity: 1, scale: 1.2 }}
-            exit={{ opacity: 0, scale: 1 }}
+            key={word.id}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 0.2, scale: 1.5 }}
+            exit={{ opacity: 0, scale: 2, y: -100 }}
             transition={{
-              duration: 3.5, // slower animation
-              delay: item.delay, // delayed popup
+              duration: 1,
               ease: "easeInOut",
+              repeatDelay: 5,
             }}
             style={{
               position: "absolute",
-              left: `${item.x}vw`,
-              top: `${item.y}vh`,
-              fontSize: item.size,
-              whiteSpace: "nowrap",
-              willChange: "transform, opacity",
+              left: `${word.x}%`,
+              top: `${word.y}%`,
+              fontSize: ".8rem",
+              fontWeight: "bold",
+              fontFamily: "Archivo Black",
+              userSelect: "none",
             }}
+            className="font-mono text-foreground tracking-widest"
           >
-            {item.text}
+            {word.text}
           </motion.span>
         ))}
       </AnimatePresence>

@@ -21,7 +21,7 @@ export const NavMenuItems = ({
       height: "15rem", // your h-40
       opacity: 1,
       transition: {
-        duration: 0.3,
+        duration: 0.1,
         ease: "easeInOut",
         when: "beforeChildren",
         staggerChildren: 0.1, // items appear one after another
@@ -46,7 +46,7 @@ export const NavMenuItems = ({
     >
       <div
         onClick={() => setIsMenuOpen(false)}
-        className="flex flex-col justify-around h-full font-semi text-xl p-4"
+        className="flex flex-col justify-around h-full font-semibold text-lg tracking-wider p-4"
       >
         <motion.a
           variants={itemVariants}

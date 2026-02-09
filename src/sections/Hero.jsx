@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import profilePic from "../assets/profile_picture.jpg";
+import mypic2 from "../assets/mypic2.jpg";
 const roles = ["Full Stack Developer", "Frontend Engineer", "Backend Engineer"];
+import { motion } from "motion/react";
+import BackgroundTextFX from "../components/BackgroundTextFx";
 export const Hero = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
@@ -37,12 +39,12 @@ export const Hero = () => {
     }
   }, [currentRoleIndex, currentText, isDeleting]);
   return (
-    <div className="min-h-screen pt-(--nav-h) flex justify-center">
+    <div className="relative z-95 min-h-screen max-w-dvw pt-(--nav-h) flex justify-center">
       <div className="mt-10 p-2 flex flex-col gap-10 md:flex-row-reverse md:justify-evenly md:items-center">
         {/* photo */}
         <section className="flex justify-center bg-blue md:h-80 md:w-80">
           <img
-            src={profilePic}
+            src={mypic2}
             alt="photo"
             className="h-40 w-40 md:w-full md:h-full rounded-full object-cover"
           />
@@ -52,13 +54,23 @@ export const Hero = () => {
           {/* name */}
           <div className="">
             <div className="flex flex-col gap-4">
-              <h4 className="text-xl font-semibold">Hello my name is</h4>
-              <h1
-                className="text-3xl md:text-5xl text-blue-600 font-black tracking-wider
+              <motion.h4
+                className="text-xl font-semibold"
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, ease: "easeIn" }}
+              >
+                Hello my name is
+              </motion.h4>
+              <motion.h1
+                className="hero-heading text-4xl lg:text-6xl text-blue-600 tracking-wider
             "
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: [0.5, 1] }}
+                transition={{ duration: 1, ease: "easeInOut" }}
               >
                 Sachin
-              </h1>
+              </motion.h1>
             </div>
           </div>
 
@@ -74,8 +86,8 @@ export const Hero = () => {
           </div>
 
           {/* description about me */}
-          <div>
-            <p className="leading-8 tracking-wider text-foreground/60">
+          <div className="border border-foreground/10 bg-black/5 p-2 lg:py-8 lg:px-4 rounded-lg backdrop-blur-[.1rem]">
+            <p className="leading-8 tracking-wider text-foreground/70">
               I’m a full-stack developer with hands-on experience building and
               maintaining web applications using modern JavaScript technologies.
               I focus on writing clean, scalable code and delivering solutions
@@ -84,6 +96,7 @@ export const Hero = () => {
           </div>
         </section>
       </div>
+      {/* <BackgroundTextFX /> */}
     </div>
   );
 };

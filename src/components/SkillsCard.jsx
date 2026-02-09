@@ -39,7 +39,7 @@ export const SkillsCard = () => {
   return (
     <div className="flex gap-6 flex-col md:grid md:grid-cols-3 lg:grid-cols-4 lg:justify-evenly lg:gap-2">
       {/* frontend skills */}
-      <section className="border border-foreground/10 p-3 rounded-md">
+      <section className="border border-foreground/10 p-3 rounded-md bg-black/5">
         <div className="flex items-center gap-2">
           <img src={frontend} alt="frontend" className="h-10 w-auto" />
           <h4 className="font-bold tracking-wider text-md">Frontend Skills</h4>
@@ -98,7 +98,7 @@ export const SkillsCard = () => {
       </section>
 
       {/* backend skills */}
-      <section className="border border-foreground/10 p-3 rounded-md">
+      <section className="border border-foreground/10 p-3 rounded-md bg-black/5">
         <div className="flex items-center gap-2">
           <img src={backend} alt="backend" className="h-10 w-auto" />
           <h4 className="font-bold tracking-wider text-md">Backend Skills</h4>
@@ -163,7 +163,7 @@ export const SkillsCard = () => {
       </section>
 
       {/* tools */}
-      <section className="border border-foreground/10 p-3 rounded-md">
+      <section className="border border-foreground/10 p-3 rounded-md bg-black/5">
         <div className="flex items-center gap-2">
           <img src={tools} alt="frontend" className="h-10 w-auto" />
           <h4 className="font-bold tracking-wider text-md">DevOps & Tools</h4>
@@ -217,7 +217,7 @@ export const SkillsCard = () => {
       </section>
 
       {/* system design */}
-      <section className="border border-foreground/10 p-3 rounded-md">
+      <section className="border border-foreground/10 p-3 rounded-md bg-black/5">
         <div className="flex items-center gap-2">
           <img src={engineer} alt="frontend" className="h-10 w-auto" />
           <h4 className="font-bold tracking-wider text-md">
