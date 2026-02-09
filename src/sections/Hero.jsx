@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import mypic2 from "../assets/mypic2.jpg";
+import profile from "../assets/profile.jpg";
 const roles = ["Full Stack Developer", "Frontend Engineer", "Backend Engineer"];
 import { motion } from "motion/react";
 import BackgroundTextFX from "../components/BackgroundTextFx";
@@ -44,7 +44,7 @@ export const Hero = () => {
         {/* photo */}
         <section className="flex justify-center bg-blue md:h-80 md:w-80">
           <img
-            src={mypic2}
+            src={profile}
             alt="photo"
             className="h-40 w-40 md:w-full md:h-full rounded-full object-cover"
           />
