@@ -14,10 +14,10 @@ export const ChatApp = () => {
         <img src={chat2} alt="" className="rounded-xl w-35" loading="lazy" />
       </div>
       <div className="flex gap-4">
-        <div className="bg-linear-to-r from-orange-400 to-yellow-400/40 py-1 px-3 text-[.8rem] rounded-lg">
+        <div className="bg-linear-to-r from-orange-400 to-yellow-400/40 py-1 px-3 text-[.7rem] rounded-lg font-semibold">
           Sandbox
         </div>
-        <div className="bg-linear-to-r from-green-400/40 to-green-700/40 py-1 px-3 text-[.8rem] rounded-lg">
+        <div className="bg-linear-to-r from-green-400/40 to-green-700/40 py-1 px-3 text-[.7rem] rounded-lg font-semibold">
           Completed
         </div>
       </div>
@@ -83,20 +83,22 @@ export const ChatApp = () => {
           to="/chat-app"
           className="bg-blue-500 py-2 px-4 rounded-xl flex items-center justify-center w-fit"
         >
-          <span className="font-semibold text-sm">View Details</span>
-          <ArrowUpRight strokeWidth={2} />
+          <span className="font-semibold text-sm text-gray-300">
+            View Details
+          </span>
+          <ArrowUpRight strokeWidth={2} className="text-gray-300" />
         </Link>
 
         <div className="flex items-center gap-2">
           <Link
             to="https://chat-app-three-chi.vercel.app"
-            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm"
+            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm text-gray-300"
           >
             Live
           </Link>
           <Link
             to="https://github.com/sachin55551010/Chat_App"
-            className="border border-foreground/30 px-4 py-2 rounded-xl bg-gray-500"
+            className="border border-foreground/30 px-4 py-2 rounded-xl bg-gray-500 text-gray-300"
           >
             <Github size={18} />
           </Link>

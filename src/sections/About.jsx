@@ -16,7 +16,7 @@ export const About = () => {
       </div>
       <section className="flex flex-col gap-4 md:grid md:grid-cols-2 mt-4">
         <div className="rounded-md border border-foreground/10 p-2 bg-black/5">
-          <p className="opacity-60 leading-8 md:leading-12 tracking-wide text-[.9rem] md:text-md">
+          <p className="text-foreground/70 leading-8 md:leading-12 tracking-wide text-[.9rem] md:text-md">
             I'm a MERN stack developer focused on building production-ready web
             applications with clean architecture and practical business logic. I
             enjoy designing scalable backend systems, implementing efficient

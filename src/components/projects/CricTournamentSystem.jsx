@@ -102,14 +102,16 @@ export const CricTournamentSystem = () => {
           to="cricket-tournament-management-system"
           className="bg-blue-500 py-2 px-4 rounded-xl flex items-center justify-center w-fit"
         >
-          <span className="font-semibold text-sm">View Details</span>
-          <ArrowUpRight strokeWidth={2} />
+          <span className="font-semibold text-sm text-gray-300">
+            View Details
+          </span>
+          <ArrowUpRight strokeWidth={2} className="text-gray-300" />
         </Link>
 
         <div className="flex items-center gap-2">
           <Link
             to=""
-            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm"
+            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm text-gray-300"
           >
             Live
           </Link>
@@ -117,7 +119,7 @@ export const CricTournamentSystem = () => {
             to="https://github.com/sachin55551010/Tournament_management_system_app"
             className="border border-foreground/30 px-4 py-2 rounded-xl bg-gray-500"
           >
-            <Github size={18} />
+            <Github size={18} className="text-gray-300" />
           </Link>
         </div>
       </div>

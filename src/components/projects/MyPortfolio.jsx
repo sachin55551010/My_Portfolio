@@ -69,20 +69,22 @@ export const MyPortfolio = () => {
           to="my-portfolio"
           className="bg-blue-500 py-2 px-4 rounded-xl flex items-center justify-center w-fit"
         >
-          <span className="font-semibold text-sm">View Details</span>
-          <ArrowUpRight strokeWidth={2} />
+          <span className="font-semibold text-sm text-gray-300">
+            View Details
+          </span>
+          <ArrowUpRight strokeWidth={2} className="text-gray-300" />
         </Link>
 
         <div className="flex items-center gap-2">
           <Link
             to="https://employee-management-application-vert.vercel.app"
-            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm"
+            className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm text-gray-300"
           >
             Live
           </Link>
           <Link
             to="https://github.com/sachin55551010/Employee_management_application"
-            className="border border-foreground/30 px-4 py-2 rounded-xl bg-gray-500"
+            className="border border-foreground/30 px-4 py-2 rounded-xl bg-gray-500 text-gray-300"
           >
             <Github size={18} />
           </Link>
