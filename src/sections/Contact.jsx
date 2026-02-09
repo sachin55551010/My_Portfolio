@@ -45,7 +45,7 @@ export const Contact = () => {
                 Have an opportunity or idea? I’d love to hear from you.
               </p>
               <a
-                href="mailto:sachinbansal3333@gmail.com"
+                href="mailto:sachin.dev1309@gmail.com"
                 className="text-blue-500"
               >
                 sachin.dev1309@gmail.com
