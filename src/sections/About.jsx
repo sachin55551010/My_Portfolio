@@ -15,14 +15,18 @@ export const About = () => {
         </h4>
       </div>
       <section className="flex flex-col gap-4 md:grid md:grid-cols-2 mt-4">
-        <div className="rounded-md border border-foreground/20 p-2 bg-black/5">
+        <div className="rounded-md border border-foreground/10 p-2 bg-black/5">
           <p className="opacity-60 leading-8 md:leading-12 tracking-wide text-[.9rem] md:text-md">
-            I'm a MERN stack developer who enjoys building production-ready web
-            applications with clean architecture and real-world logic. I focus
-            on writing maintainable code, designing scalable backend systems,
-            and creating smooth, responsive user experiences. I learn
-            continuously by building, breaking, and improving things, and I care
-            more about solid fundamentals than quick hacks.
+            I'm a MERN stack developer focused on building production-ready web
+            applications with clean architecture and practical business logic. I
+            enjoy designing scalable backend systems, implementing efficient
+            state management, and creating responsive, smooth user experiences
+            on the frontend. My approach combines strong fundamentals with
+            continuous learning — I regularly explore new tools, refine my
+            development workflow, and improve performance, maintainability, and
+            user experience in every project. I prefer structured, maintainable
+            solutions over quick fixes and aim to write code that is clear,
+            reusable, and built for long-term growth.
           </p>
         </div>
 

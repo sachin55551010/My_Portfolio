@@ -87,11 +87,12 @@ export const Hero = () => {
 
           {/* description about me */}
           <div className="border border-foreground/10 bg-black/5 p-2 lg:py-8 lg:px-4 rounded-lg backdrop-blur-[.1rem]">
-            <p className="leading-8 tracking-wider text-foreground/70">
-              I’m a full-stack developer with hands-on experience building and
-              maintaining web applications using modern JavaScript technologies.
-              I focus on writing clean, scalable code and delivering solutions
-              that solve real business problems.
+            <p className="leading-8 tracking-wider text-foreground/70 text-sm">
+              Self-taught full-stack developer focused on solving real business
+              problems by building scalable, high-performance web applications.
+              Experienced in modern JavaScript technologies, clean architecture,
+              and maintainable code, with a hands-on approach to turning complex
+              ideas into practical digital solutions.
             </p>
           </div>
         </section>
