@@ -2,7 +2,7 @@ import { SkillsCard } from "../components/SkillsCard";
 
 export const Skills = () => {
   return (
-    <div className="min-h-screen pt-(--nav-h) p-2">
+    <div className="min-h-screen pt-(--nav-h) p-2 max-w-screen overflow-hidden">
       {/* title */}
       <div className="flex items-center gap-2 mb-6">
         <span className="h-3 w-3 rounded-full bg-orange-400"></span>
