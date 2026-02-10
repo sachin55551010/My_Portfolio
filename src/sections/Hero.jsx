@@ -59,6 +59,7 @@ export const Hero = () => {
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1, ease: "easeIn" }}
+                whileInView={{ y: 0 }}
               >
                 Hello my name is
               </motion.h4>
@@ -86,7 +87,14 @@ export const Hero = () => {
           </div>
 
           {/* description about me */}
-          <div className="border border-foreground/10 bg-black/5 p-2 lg:py-8 lg:px-4 rounded-lg backdrop-blur-[.1rem]">
+          <motion.div
+            className="border border-foreground/10 bg-black/5 p-2 lg:py-8 lg:px-4 rounded-lg backdrop-blur-[.1rem]"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ y: [60, 0] }}
+            viewport={{ once: false }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
             <p className="leading-8 tracking-wider text-foreground/70 text-sm">
               Self-taught full-stack developer focused on solving real business
               problems by building scalable, high-performance web applications.
@@ -94,7 +102,7 @@ export const Hero = () => {
               and maintainable code, with a hands-on approach to turning complex
               ideas into practical digital solutions.
             </p>
-          </div>
+          </motion.div>
         </section>
       </div>
       {/* <BackgroundTextFX /> */}

@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+// frontend svg files
 import html from "../assets/html.svg";
 import css from "../assets/css.svg";
 import js2 from "../assets/js2.svg";
@@ -34,6 +36,7 @@ import code from "../assets/code.svg";
 import folder from "../assets/folder.svg";
 import performance from "../assets/performance.svg";
 import debug from "../assets/debug.svg";
+import { BlurText } from "./BlurText";
 
 export const SkillsCard = () => {
   return (
@@ -54,45 +57,45 @@ export const SkillsCard = () => {
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-500"></span>
             <img src={html} alt="html" className="h-7 w-auto" />
-            <span>HTML</span>
+            <BlurText delay={0.15}>HTML</BlurText>
           </div>
 
           {/* css */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
             <img src={css} alt="html" className="h-7 w-auto" />
-            <span>CSS</span>
+            <BlurText delay={0.2}>CSS</BlurText>
           </div>
 
           {/* javascript */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
             <img src={js2} alt="html" className="h-7 w-auto" />
-            <span>javascript</span>
+            <BlurText delay={0.25}>Javascript</BlurText>
           </div>
           {/* react */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
             <img src={react} alt="html" className="h-7 w-auto" />
-            <span>React</span>
+            <BlurText delay={0.3}>React</BlurText>
           </div>
           {/* tailwind */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
             <img src={tailwind} alt="html" className="h-7 w-auto" />
-            <span>Tailwind</span>
+            <BlurText delay={0.35}>Tailwind Css</BlurText>
           </div>
           {/* redux */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-purple-500"></span>
             <img src={redux} alt="html" className="h-7 w-auto" />
-            <span>Redux Toolkit</span>
+            <BlurText delay={0.4}>Redux Toolkit</BlurText>
           </div>
           {/* rtk */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-purple-300"></span>
             <img src={rtk} alt="html" className="h-7 w-auto" />
-            <span>RTK Query</span>
+            <BlurText delay={0.45}>RTK Query</BlurText>
           </div>
         </div>
       </section>
@@ -113,7 +116,7 @@ export const SkillsCard = () => {
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-600"></span>
             <img src={node} alt="html" className="h-7 w-auto" />
-            <span>Node.JS</span>
+            <BlurText delay={0.15}>Node.JS</BlurText>
           </div>
 
           {/* css */}
@@ -124,7 +127,7 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-500 p-1 rounded-md"
             />
-            <span>Express.JS</span>
+            <BlurText delay={0.2}>Express.JS</BlurText>
           </div>
 
           {/* rest api */}
@@ -135,19 +138,19 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-700 p-1 rounded-md"
             />
-            <span>REST APIs</span>
+            <BlurText delay={0.25}>REST APIs</BlurText>
           </div>
           {/* react */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
             <img src={mongodb} alt="html" className="h-7 w-auto" />
-            <span>MongoDB</span>
+            <BlurText delay={0.3}>MongoDB</BlurText>
           </div>
           {/* tailwind */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
             <img src={mongoose} alt="html" className="h-7 w-auto" />
-            <span>Mongoose</span>
+            <BlurText delay={0.35}>Mongoose</BlurText>
           </div>
           {/* redux */}
           <div className="flex items-center gap-2">
@@ -157,7 +160,7 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-500 p-1 rounded-md"
             />
-            <span>JWT Authentication</span>
+            <BlurText delay={0.4}>JWT Authentication</BlurText>
           </div>
         </div>
       </section>
@@ -178,40 +181,40 @@ export const SkillsCard = () => {
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-500"></span>
             <img src={git} alt="html" className="h-7 w-auto" />
-            <span>Git</span>
+            <BlurText delay={0.15}>Git</BlurText>
           </div>
 
           {/* github */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-blue-500"></span>
             <img src={github} alt="html" className="h-7 w-auto" />
-            <span>Github</span>
+            <BlurText delay={0.2}>Github</BlurText>
           </div>
 
           {/* ci/cd */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-500"></span>
             <img src={ci} alt="html" className="h-7 w-auto" />
-            <span>CI/CD</span>
+            <BlurText delay={0.25}>CI/CD</BlurText>
           </div>
 
           {/* docker */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-blue-500"></span>
             <img src={docker} alt="html" className="h-7 w-auto" />
-            <span>Docker</span>
+            <BlurText delay={0.3}>Docker</BlurText>
           </div>
           {/* deployment */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-blue-500"></span>
             <img src={deploy} alt="html" className="h-7 w-auto" />
-            <span>Deployment (Vercel/Render)</span>
+            <BlurText delay={0.35}>Deployment (Vercel/Render)</BlurText>
           </div>
           {/* config */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-500"></span>
             <img src={config} alt="html" className="h-7 w-auto" />
-            <span>Environment Configuration</span>
+            <BlurText delay={0.4}>Environment Configuration</BlurText>
           </div>
         </div>
       </section>
@@ -234,27 +237,27 @@ export const SkillsCard = () => {
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-500"></span>
             <img src={system} alt="html" className="h-7 w-auto" />
-            <span>System Design</span>
+            <BlurText delay={0.15}>System Design</BlurText>
           </div>
 
           {/* clean code */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-orange-200"></span>
             <img src={code} alt="html" className="h-7 w-auto" />
-            <span>Clean code principles</span>
+            <BlurText delay={0.2}>Clean code principles</BlurText>
           </div>
 
           {/* MVC / Modular Architecture */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
             <img src={folder} alt="html" className="h-7 w-auto" />
-            <span>MVC Architecture</span>
+            <BlurText delay={0.25}>MVC Architecture</BlurText>
           </div>
           {/* performance */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
             <img src={performance} alt="html" className="h-7 w-auto" />
-            <span>Performance Optimization</span>
+            <BlurText delay={0.3}>Performance Optimization</BlurText>
           </div>
           {/* debug */}
           <div className="flex items-center gap-2">
@@ -264,7 +267,7 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-500 p-1 rounded-md"
             />
-            <span>Debugging</span>
+            <BlurText delay={0.35}>Debugging</BlurText>
           </div>
           {/* role access control */}
           <div className="flex items-center gap-2">
@@ -274,7 +277,7 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-500 p-1 rounded-full"
             />
-            <span>Role-based Access Control</span>
+            <BlurText delay={0.4}>Role-based Access Control</BlurText>
           </div>
           {/* error handling */}
           <div className="flex items-center gap-2">
@@ -284,7 +287,7 @@ export const SkillsCard = () => {
               alt="html"
               className="h-7 w-auto bg-gray-500 p-1 rounded-md"
             />
-            <span>Error Handling</span>
+            <BlurText delay={0.45}>Error Handling</BlurText>
           </div>
         </div>
       </section>
