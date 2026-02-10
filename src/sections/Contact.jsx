@@ -29,7 +29,7 @@ export const Contact = () => {
               professional growth.
             </p>
 
-            <Link to="https://drive.google.com/file/d/1qQPkEpdG2Dk35oY450KHGNsEBlaRxZTx/view?usp=drive_link">
+            <Link to="https://drive.google.com/file/d/1O4LiiNT3FDwJ_3D6G8cn-6vt-aHvVFAW/view?usp=drive_link">
               <button className="bg-linear-to-r from-green-600/50 to-teal-800/50 px-6 py-3 rounded-lg mt-4 flex items-center gap-2 cursor-pointer hover:bg-linear-to-r hover:from-green-600 hover:to-teal-800 hover:scale-105 transition-all duration-200">
                 <span className="font-black">Download CV</span>
                 <FileText size={20} />
