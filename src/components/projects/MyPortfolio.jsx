@@ -46,8 +46,22 @@ export const MyPortfolio = () => {
       <div className="flex flex-col gap-4">
         {/* frontend */}
         <div className="flex flex-col gap-3 bg-gray-700/10 p-2 rounded-xl">
-          <h6 className="font-bold text-foreground">Frontend</h6>
-          <div className="flex flex-wrap gap-4">
+          <motion.h6
+            className="font-bold text-foreground"
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            Frontend
+          </motion.h6>
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               React
             </span>
@@ -60,7 +74,7 @@ export const MyPortfolio = () => {
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               Framer Motion
             </span>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* buttons */}

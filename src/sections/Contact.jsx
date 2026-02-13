@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 export const Contact = () => {
   return (
-    <div className="min-h-dvh pt-(--nav-h) p-2">
+    <div className="min-h-dvh pt-(--nav-h) p-2 overflow-hidden">
       {/* page heading */}
       <div className="flex items-center gap-2">
         <span className="h-3 w-3 rounded-full bg-purple-400"></span>
@@ -58,7 +58,18 @@ export const Contact = () => {
           <h1>Follow and Connect</h1>
 
           {/* iocns */}
-          <div className="flex items-center justify-around bg-gray-700/20 py-3 rounded-lg mt-4 overflow-hidden">
+          <motion.div
+            className="flex items-center justify-around bg-gray-700/20 py-3 rounded-lg mt-4 overflow-hidden"
+            initial={{ opacity: 0, scale: 3, filter: "blur(10px)" }}
+            whileInView={{
+              opacity: [0, 0.5, 1],
+              y: 0,
+              scale: 1,
+              filter: ["blur(8px)", "blur(6px)", "blur(4px)", "blur(0px)"],
+            }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{
@@ -115,7 +126,7 @@ export const Contact = () => {
                 />
               </Link>
             </motion.div>
-          </div>
+          </motion.div>
         </section>
       </div>
     </div>

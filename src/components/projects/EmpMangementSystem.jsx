@@ -1,6 +1,7 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import emp from "../../assets/emp.png";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 export const EmpMangementSystem = () => {
   return (
     <div className="border p-3 rounded-md border-foreground/20 flex flex-col gap-3 bg-black/5">
@@ -37,8 +38,22 @@ export const EmpMangementSystem = () => {
       <div className="flex flex-col gap-4">
         {/* frontend */}
         <div className="flex flex-col gap-3 bg-gray-700/10 p-2 rounded-xl">
-          <h6 className="font-bold text-foreground">Frontend</h6>
-          <div className="flex flex-wrap gap-4">
+          <motion.h6
+            className="font-bold text-foreground"
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            Frontend
+          </motion.h6>
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               React
             </span>
@@ -54,13 +69,27 @@ export const EmpMangementSystem = () => {
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               Redux
             </span>
-          </div>
+          </motion.div>
         </div>
 
         {/* backend */}
         <div className="flex flex-col gap-3 bg-gray-700/10 p-2 rounded-xl">
-          <h6 className="font-bold text-foreground">Backend</h6>
-          <div className="flex flex-wrap gap-4">
+          <motion.h6
+            className="font-bold text-foreground"
+            initial={{ opacity: 0, y: -15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            Backend
+          </motion.h6>
+          <motion.div
+            className="flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: [0, 0.5, 1], y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               Nodejs
             </span>
@@ -80,7 +109,7 @@ export const EmpMangementSystem = () => {
             <span className="px-3 py-1 text-sm rounded-full bg-linear-to-r from-blue-500/70 to-indigo-600/70 font-semibold text-gray-300 hover:shadow-[0_0_10px_var(--color-primary)] hover:cursor-pointer transition-all duration-200">
               Cloudinary
             </span>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* buttons */}
