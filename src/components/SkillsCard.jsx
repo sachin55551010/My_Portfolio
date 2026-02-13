@@ -19,6 +19,7 @@ import api from "../assets/api.svg";
 import jwt from "../assets/jwt.svg";
 import role from "../assets/role.svg";
 import error from "../assets/error.svg";
+import socket from "../assets/socket.svg";
 
 //devops and tools svg files
 import tools from "../assets/tools.svg";
@@ -146,13 +147,13 @@ export const SkillsCard = () => {
             <img src={mongodb} alt="html" className="h-7 w-auto" />
             <BlurText delay={0.3}>MongoDB</BlurText>
           </div>
-          {/* tailwind */}
+          {/* mongoose */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-green-500"></span>
             <img src={mongoose} alt="html" className="h-7 w-auto" />
             <BlurText delay={0.35}>Mongoose</BlurText>
           </div>
-          {/* redux */}
+          {/* jwt */}
           <div className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-gray-500"></span>
             <img
@@ -161,6 +162,15 @@ export const SkillsCard = () => {
               className="h-7 w-auto bg-gray-500 p-1 rounded-md"
             />
             <BlurText delay={0.4}>JWT Authentication</BlurText>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-gray-500"></span>
+            <img
+              src={socket}
+              alt="html"
+              className="h-7 w-auto bg-gray-500 p-1 rounded-md"
+            />
+            <BlurText delay={0.4}>Socket.io</BlurText>
           </div>
         </div>
       </section>
