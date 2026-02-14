@@ -80,7 +80,7 @@ export const Contact = () => {
                 repeatDelay: 2,
               }}
             >
-              <Link to="https://www.linkedin.com/in/sachin-khatri-69138b286">
+              <Link to="https://www.linkedin.com/in/sachin-bansal-69138b286">
                 <img
                   src={linkedin}
                   alt=""
