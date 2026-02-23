@@ -138,7 +138,7 @@ export const CricTournamentSystem = () => {
 
         <div className="flex items-center gap-2">
           <Link
-            to=""
+            to="https://hillscricketarena.vercel.app"
             className="bg-blue-500 px-5 py-2 rounded-xl font-semibold text-sm text-gray-300"
           >
             Live
