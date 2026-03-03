@@ -9,6 +9,7 @@ import redux from "../assets/redux.svg";
 import rtk from "../assets/rtk.svg";
 import frontend from "../assets/frontend.svg";
 import backend from "../assets/backend.svg";
+import typescript from "../assets/typescript.svg";
 
 // backend svg files
 import node from "../assets/node.svg";
@@ -73,6 +74,12 @@ export const SkillsCard = () => {
             <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
             <img src={js2} alt="html" className="h-7 w-auto" />
             <BlurText delay={0.25}>Javascript</BlurText>
+          </div>
+          {/* typescript */}
+          <div className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
+            <img src={typescript} alt="html" className="h-7 w-auto" />
+            <BlurText delay={0.25}>Typescript</BlurText>
           </div>
           {/* react */}
           <div className="flex items-center gap-2">
