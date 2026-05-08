@@ -30,7 +30,7 @@ html {
 /* Dark theme */
 @layer theme {
   [data-theme="dark"] {
-    --color-base: rgba(15, 23, 42, 1);
+    --color-base: rgb(16, 16, 16);
     --color-foreground: #f8fafc;
     --color-card: #0f172a;
     --color-primary: #3b82f6;
